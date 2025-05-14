@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/boostrap.css">
+    <link rel="stylesheet" href="assets/css/mylibrary.css">
+    <link rel="stylesheet" href="assets/css/styleAnalysis.css">
+    <script>
+        window.onload = function() { 
+   setTimeout(function(){
+  document.getElementById("loader").style.display = "none";
+       
+   }, 500);
+
+ };
+
+    </script>
+</head>
+
+<body>
+
+    <div class="loader" id="loader">
+
+        <img width="80px" src="/assets/images/bouncing-circles.svg" alt="">
+    </div>
+
+    <div class="main-wrapper">
+        <nav class="fixed-top nav ">
+            <header class="header d-flex ">
+
+
+                <div class="right-header d-flex align-items-center gap-3 py-1 ">
+                    <div class="logo">
+                        <a class="text-pane" href="/">لوحة تحكم البائع</a>
+                    </div>
+
+                    <a href="#">
+                        <i style="font-size: 20px;" id="sidebar-toggle" class="fa-solid fa-bars-staggered"></i>
+                    </a>
+
+                    <form class="search" action="">
+                        <input type="text" class="form-control">
+                        <i class="fas fa-camera"></i>
+
+
+                    </form>
+                </div>
+
+
+
+
+
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div class="icons">
+                        <a href=""> <i class="fa-solid fa-comment"></i></a>
+                        <a href=""> <i class="fa-solid fa-envelope"></i></a>
+                        <a href=""> <i class="fa-solid fa-bell"></i></a>
+                        <!-- <a href=""> <i class="fa-solid fa-download"></i></a> -->
+                    </div>
+                    <div class="avatar">
+                        <img src="/assets/images/Untitled.jpg" alt="">
+                    </div>
+
+                    <a type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"> <i class="fa-solid fa-bars"></i></a> 
+                </div>
+            </header>
+        </nav>
+
+        <div class="upper-container">
+
+            <div class="sidebar" id="sidebar">
+                <div class="profile">
+                    <img width="90" src="/assets/images/Untitled.jpg" alt="">
+                    <h3>أسـعـد بـظ</h3>
+                </div>
+
+                <ul class="ul-sidebar">
+                    <li class="mb-2 ">
+                        <i class="fa-solid fa-house home"></i>
+                        <a href="index.html">الـصـفـحـة الـرئيسية</a> <i class="fa-solid fa-arrow-down-short-wide"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-boxes-stacked home"></i>
+                        <a href="Products.html">الـــمــنـــتـــجـــــات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2 active">
+                        <i class="fa-solid fa-chart-line home"></i>
+                        <a href="analysis.html ">الــــتــحــــلــيــــلات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-handshake-angle home"></i>
+                        <a href="">الــصـــفـــقــات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-bullhorn home"></i>
+                        <a href="">حملات التسويق</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-star-half-stroke home"></i>
+                        <a href="">الـتـقـيـمــات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-tag home"></i>
+                        <a href="">الـتـسـعـيـر</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-money-bill-trend-up home"></i>
+                        <a href="">الأربـــــــاح</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-box home"></i>
+                        <a href="">الـطـلـبــات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-percent home"></i>
+                        <a href="">الـضرائب</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-rotate-left home"></i>
+                        <a href="">الـمـرتـجـع</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-bell home"></i>
+                        <a href="">الاشـعـارات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-5">
+                        <i class="fa-solid fa-circle-info home"></i>
+                        <a href="">الـدعـم</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="content p-2" id="content">
+                <div class="inner-content">
+                    <div class="container-fluid ">
+                        <div class="row gap-2 cards  flex-md-nowrap">
+                           
+                            <div class="col-md-3 stat1  onclick="selectCard(this) active>
+                                <h3>الــصـــفـــقــات</h3>
+                                <h4 style="font-weight: bolder;">1460</h4>
+                                <div class="parts d-flex  ">
+                                    <div class="p1 ">
+                                        <h5>شهرياً</h5>
+                                        <p class="num">1250</p>
+                                    </div>
+                                    <div class="p2">
+                                        <h5>الكميات</h5>
+                                        <div class="box">
+                                            <p class="d-flex"> <i style="padding:3px ; color:rgb(1, 195, 1)"
+                                                class="fa-solid fa-plus"></i>250</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="p3">
+                                        <h5>الـتـريــنـــد</h5>
+                                        <p style="font-weight: bolder; " class="d-flex"> <i
+                                                style="padding:3px ; color:rgb(1, 195, 1)"
+                                                class="fa-solid fa-angles-up "></i> 14,5 %</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 stat2 flex-shrink-1 onclick="selectCard(this)>
+                                <h3>العوائد</h3>
+                                <h4 style="font-weight: bolder;">2495 8 765 </h4>
+                                <div class="parts d-flex  ">
+                                    <div class="p1 ">
+                                        <h5> في 3 شهور</h5>
+                                        <p class="num">943 3438 </p>
+                                    </div>
+                                    <div class="p2">
+                                        <h5>الزيادة</h5>
+                                        <div class="box">
+                                            <p class="d-flex"> <i style="padding:3px ; color:rgb(35, 152, 35)"
+                                                class="fa-solid fa-plus"></i>360</p>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 stat3 flex-shrink-1 onclick="selectCard(this)>
+                                <h3>صافي الأربـــــــاح</h3>
+                                <h4 style="font-weight: bolder;">9237 23</h4>
+                                <div class="parts d-flex  ">
+                                    <div class="p1 ">
+                                        <h5>شهرياً</h5>
+                                        <p class="num">34 304</p>
+                                    </div>
+                                    
+                                        
+                                    
+                                    <div class="p3">
+                                        <h5>نسبة االزيادة</h5>
+                                        <p style="font-weight: bolder; " class="d-flex"> <i
+                                                style="padding:3px ; color:rgb(1, 195, 1)"
+                                                class="fa-solid fa-angles-up "></i> 3,5 %</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 stat4 flex-shrink-1onclick="selectCard(this)>
+                                <h3>تم الالغاء </h3>
+                                <h4 style="font-weight: bolder;">54 طلب</h4>
+                                <div class="parts d-flex  ">
+                                    <div class="p1 ">
+                                        <h5> اسبوعياً</h5>
+                                        <p class="num">12~14</p>
+                                    </div>
+                                    <div class="p2">
+                                        <h5>خسارة</h5>
+                                        <div class="box">
+                                            <p class="d-flex"> <i style="padding:3px ; color:rgb(236, 18, 18)"
+                                                class="fa-solid fa-minus"></i>450</p>
+                                        
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="p3">
+                                        <h5>الـتـريــنـــد</h5>
+                                        <p style="font-weight: bolder; " class="d-flex"> <i
+                                                style="padding:3px ; color:rgb(236, 18, 18)"
+                                                class="fa-solid fa-angles-down "></i> 14,5 %</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 stat5 flex-shrink-1 onclick="selectCard(this)>
+                                <h3>تقييمك في الموقع</h3>
+                                <h4 style="font-weight: bolder;">9.5 من 10 </h4>
+                                <div class="parts d-flex  ">
+                                    <div class="p1 ">
+                                        <h5> الشهر الاخير</h5>
+                                        <p class="num">90% ايجابي</p>
+                                    </div>
+                                
+                                    <div class="p3">
+                                        <h5>الـتـريــنـــد</h5>
+                                        <p style="font-weight: bolder; " class="d-flex"> <i
+                                                style="padding:3px ; color:rgb(22, 236, 18)"
+                                                class="fa-solid fa-angles-up "></i> 6.7 %</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                    </div>
+                    <div class="row mt-5 firstchart">
+                        <div class="col-md-6 mb-3">
+                            <div class="cards2 ">
+                                <p class="text-center " style="font-size: x-large;">المدة الزمنية </p>
+
+                                <div id="chart2"></div>
+
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="cards2">
+                                <p class="text-center " style="font-size: x-large;">المدة الزمنية </p>
+
+                                <div id="chart1"></div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="row mt-5 secondchart">
+                        <div class="col-md-6 mb-3">
+                            <div class="cards2 ">
+                                <p class="text-center " style="font-size: x-large;">نسبة زيادة المبيعات شهرياً</p>
+
+                                <div id="c3"></div>
+
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="cards2">
+                                <p class="text-center " style="font-size: x-large;">المنتجات الاكثر مبيعاً </p>
+
+                                <div id="c4"></div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+
+                    
+
+
+
+
+
+                    <div class="row mt-5 Thirdchart">
+                        <div class="col-md-6 mb-3">
+                            <div class="cards3 ">
+                                <p class="text-center " style="font-size: x-large;">نسبة الأربـــــــاح شهرياً</p>
+
+                                <div id="c5"></div>
+
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="cards3">
+                                <p class="text-center " style="font-size: x-large;">معدل نمو الارباح بالأشهر الأخيرة</p>
+
+                                <div id="c6"></div>
+
+                            </div>
+                            
+                        </div>
+                    </div> 
+
+                    <div class="row mt-5 fourchart">
+                        <div class="col-md-6 mb-3">
+                            <div class="cards4">
+                                <p class="text-center " style="font-size: x-large;">معدل الغاء الطلبات</p>
+
+                                <div id="c7"></div>
+
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="cards4">
+                                <p class="text-center " style="font-size: x-large;">نسبة الخسارة المحققة</p>
+
+                                <div id="c8"></div>
+
+                            </div>
+                            
+                        </div>
+                    </div> 
+
+
+                    <div class="row mt-5 fivechart">
+                        <div class="col-md-6 mb-3">
+                            <div class="cards5">
+                                <p class="text-center " style="font-size: x-large;">معدل تقييمات الزبائن</p>
+
+                                <div id="c9"></div>
+
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="cards5">
+                                <p class="text-center " style="font-size: x-large;">نسبة متابعة الـتـريــنـــد</p>
+
+                                <div id="c10"></div>
+
+                            </div>
+                            
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    
+<!--  Start Left-Side-Bar -->
+
+
+  
+<div class="offcanvas offcanvas-end sh0w" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+    
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+
+        <div class="side-body-left">
+                 
+        <div class="left-side-elements">
+            
+            <h3>التواصل مع الـدعـم <i class="fa-solid fa-headset ico-elem"></i></h3>
+            
+
+        </div>
+      
+        <div class="left-side-elements">
+            
+            <h3>المحفظة الالكترونية<i class="fa-solid fa-wallet ico-elem0"></i></h3>
+            
+
+        </div>
+      
+        <div class="left-side-elements">
+            
+            <h3>الاعدادات<i class="fa-solid fa-wrench ico-elem1"></i></h3>
+            
+
+        </div>
+      
+        <div class="left-side-elements">
+            
+            <h3>تسجيل الخروج<i class="fa-solid fa-right-from-bracket ico-elem2"></i></h3>
+            
+            
+        </div>
+
+        </div>
+     
+
+
+      </div>
+    </div>
+  </div>
+<!-- End Left-Side-Bar -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="assets/js/charts.js"></script> 
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.3.0/b-3.2.3/b-html5-3.2.3/b-print-3.2.3/r-3.0.4/datatables.min.css" rel="stylesheet" integrity="sha384-8ux2Y8a7zrjqT1fGCBBSPQnEF7j5kjOKuqTWmc8c5Fds1HSwOucwCQthvM+WdQmb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/boostrap.css">
+    <link rel="stylesheet" href="assets/css/mylibrary.css">
+    <link rel="stylesheet" href="assets/css/stylePro.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+        <script>
+            window.onload = function() { 
+       setTimeout(function(){
+      document.getElementById("loader").style.display = "none";
+           
+       }, 500);
+    
+     };
+    
+        </script>
+</head>
+
+<body>
+
+    <div class="loader" id="loader">
+
+        <img width="80px" src="/assets/images/bouncing-circles.svg" alt="">
+    </div>
+    <div class="main-wrapper">
+        <nav class="fixed-top nav ">
+            <header class="header d-flex ">
+
+
+                <div class="right-header d-flex align-items-center gap-3 py-1 ">
+                    <div class="logo">
+                        <a class="text-pane" href="/">لوحة تحكم البائع</a>
+                    </div>
+
+                    <a href="#">
+                        <i style="font-size: 20px;" id="sidebar-toggle" class="fa-solid fa-bars-staggered"></i>
+                    </a>
+
+                    <form class="search" action="">
+                        <input type="text" class="form-control">
+                        <i class="fas fa-camera"></i>
+
+
+                    </form>
+                </div>
+
+
+
+
+
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div class="icons">
+                        <a href=""> <i class="fa-solid fa-comment"></i></a>
+                        <a href=""> <i class="fa-solid fa-envelope"></i></a>
+                        <a href=""> <i class="fa-solid fa-bell"></i></a>
+                        <!-- <a href=""> <i class="fa-solid fa-download"></i></a> -->
+                    </div>
+                    <div class="avatar">
+                        <img src="/assets/images/Untitled.jpg" alt="">
+                    </div>
+
+                    <a type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"> <i class="fa-solid fa-bars"></i></a> 
+
+
+                </div>
+            </header>
+        </nav>
+
+        <div class="upper-container">
+
+            <div class="sidebar" id="sidebar">
+                <div class="profile">
+                    <img width="90" src="/assets/images/Untitled.jpg" alt="">
+                    <h3>أسـعـد بـظ</h3>
+                </div>
+
+                <ul class="ul-sidebar">
+                    <li class="mb-2 ">
+                        <i class="fa-solid fa-house home"></i>
+                        <a href="index.html">الـصـفـحـة الـرئيسية</a> <i class="fa-solid fa-arrow-down-short-wide"></i>
+
+                    </li>
+                    <li class="mb-2 active">
+                        <i class="fa-solid fa-boxes-stacked home"></i>
+                        <a href="">الـــمــنـــتـــجـــــات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-chart-line home"></i>
+                        <a href="analysis.html">الــــتــحــــلــيــــلات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-handshake-angle home"></i>
+                        <a href="">الــصـــفـــقــات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-bullhorn home"></i>
+                        <a href="">حملات التسويق</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-star-half-stroke home"></i>
+                        <a href="">الـتـقـيـمــات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-tag home"></i>
+                        <a href="">الـتـسـعـيـر</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-money-bill-trend-up home"></i>
+                        <a href="">الأربـــــــاح</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-box home"></i>
+                        <a href="">الـطـلـبــات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-percent home"></i>
+                        <a href="">الـضرائب</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-rotate-left home"></i>
+                        <a href="">الـمـرتـجـع</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-bell home"></i>
+                        <a href="">الاشـعـارات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-5">
+                        <i class="fa-solid fa-circle-info home"></i>
+                        <a href="">الـدعـم</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="content p-2" id="content">
+                <div class="inner-content">
+                    <div class="container-fluid ">
+                       
+
+                        <div class="row">
+
+                            <div class="col-md-2 sec1">
+                                <!-- فلتر التاريخ -->
+                                <div class="card date-filter-card filterCa">
+                                    <div class="card-header bg-primary text-white headsec">
+                                        <h5 class="mb-0 text-center">البحث عبر التاريخ</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- أزرار الاختيار -->
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <button type="button" class="btn btn-outline-primary date-method-btn active"
+                                                data-method="single">
+                                                <i class="far fa-calendar-alt mr-1"></i> تاريخ واحد
+                                            </button>
+                                            <button type="button" class="btn btn-outline-primary date-method-btn"
+                                                data-method="range">
+                                                <i class="far fa-calendar-check mr-1"></i> نطاق زمني
+                                            </button>
+                                        </div>
+
+                                        <!-- حقل اختيار التاريخ -->
+                                        <div class="date-input-container mb-3">
+                                            <div class="input-group single-date">
+                                                <input type="text" class="form-control datepicker-input"
+                                                    placeholder="اختر التاريخ">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text"><i
+                                                            class="far fa-calendar-alt"></i></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group range-date d-none">
+                                                <input type="text" class="form-control datepicker-from"
+                                                    placeholder="من التاريخ">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text"><i
+                                                            class="far fa-calendar-alt"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control datepicker-to ml-2"
+                                                    placeholder="إلى التاريخ">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text"><i
+                                                            class="far fa-calendar-alt"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- تقويم صغير -->
+                                        <div class="calendar-container ">
+                                            <div id="inline-calendar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4 sec2 ">
+
+
+                                <!-- عنوان البحث -->
+                                <div class="card-header bg-primary text-white headsec">
+                                    <h5 class="mb-0 text-center  namesec">البحث عبر اسم المنتج</h5>
+                                </div>
+                                <div class="search-section">
+                                    <!-- مربع البحث وأزرار الفلتر والبحث -->
+                                    <div class="search-box-container">
+
+                                        <div class="input-group">
+                                            <i class="fa-solid fa-sliders icon"></i>
+                                            <input type="text" id="searchInput" class="form-control search-input"
+                                                placeholder="أدخل نص البحث...">
+                                            <div class="input-group-append btn-se">
+                                                <!-- <button class="btn btn-outline-secondary filter-btn" type="button">
+                                                        
+                                                    </button> -->
+
+
+                                                <button class="btn btn-primary search-btn " type="button">بحث</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- جميع مجموعات المنتجات في حقل واحد -->
+                                    <div class="all-products-container">
+                                        <!-- المجموعة الأولى -->
+                                        <div class="product-group">
+                                            <!-- <h4 class="group-title">المجموعة الأولى</h4> -->
+                                            <div class="products-list " >
+                                                <h6 class="h-title">الاكثر مبيعاً</h6>
+                                                <div class="product-item">لابتوبات </div>
+                                                <div class="product-item">موبايلات</div>
+                                                <div class="product-item">شاشات</div>
+                                                <div class="product-item">كيبورد</div>
+                                            </div>
+
+                                            
+                                        </div>
+
+                                        <!-- المجموعة الثانية -->
+                                        <div class="product-group">
+                                            <!-- <h4 class="group-title">المجموعة الثانية</h4> -->
+                                            <div class="products-list">
+                                            
+                                                <h6 class="h-title2">المتوسط مبيعاً</h6>
+                                                <div class="product-item">ماوس </div>
+                                                <div class="product-item">مكتب حاسوب</div>
+                                                <div class="product-item">حامل شاشة</div>
+                                                <div class="product-item">سماعات</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- المجموعة الثالثة -->
+                                        <div class="product-group">
+                                            <!-- <h4 class="group-title">المجموعة الثالثة</h4> -->
+                                            <div class="products-list">
+                                                <h6 class="h-title3">الأقل مبيعاً</h6>
+                                                <div class="product-item">مايكرفون</div>
+                                                <div class="product-item">نظارات VR</div>
+                                                <div class="product-item">ادوات تنظيف الحاسوب</div>
+                                                <div class="product-item">اكسسوارات</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 sec3 ">
+
+
+                                <!-- عنوان البحث -->
+                                <div class="card-header bg-primary text-white headsec">
+                                    <h5 class="mb-0 text-center  namesec">البحث عبر منطقة البيع</h5>
+                                </div>
+                                <div class="card-body">
+
+
+
+                                    <!-- مربع البحث -->
+                                    <div class="search-box-container mb-3">
+                                        <div class="dropdown "> <!-- زر المنطقة مع السهم -->
+                                            <button
+                                            class="btn btn-outline-primary dropdown-toggle w-100 text-right btn-reg"
+                                            type="button" id="areaDropdown" data-bs-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                                المنطقة
+                                            </button>
+                                            <div class="dropdown-menu w-100" aria-labelledby="areaDropdown">
+                                                <a class="dropdown-item" href="#">المنطقة الشمالية</a>
+                                                <a class="dropdown-item" href="#">المنطقة الجنوبية</a>
+                                                <a class="dropdown-item" href="#">المنطقة الشرقية</a>
+                                                <a class="dropdown-item" href="#">المنطقة الغربية</a>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control search-input"
+                                                placeholder="ابحث في المنطقة...">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary search-btn" type="button">بحث</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="map-container" style="height: 250px;">
+                                        <img src="/assets/images/map.png" alt="خريطة المنطقة" class="img-fluid rounded"
+                                            style="height: 250px; width:500px">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4 ">
+                        <div class="col-12 mb-2 database-low">
+                            
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0 datati" style="padding-right: 10px;font-size:25px;padding-top: 5px;padding-bottom: 5px;" >قاعدة البيانات</h5>
+                                </div>
+                                <div class="btn-database m-2">
+
+                                    
+
+                                    <button class="btn-database0" type="button" id="btn-action" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                       أضف  <i class="fa-solid fa-plus" style="color: rgb(204, 16, 173);"></i>
+                                    </button>
+                                    <button  class="btn-database0" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                        تعديل <i   style="color: rgb(204, 16, 173);" class="fa-solid fa-pen-to-square"></i>
+                                    </button>
+                                    <button class="btn-database0" type="button"  data-bs-toggle="modal" data-bs-target="#Delet-item" >
+                                        حذف <i  style="color: rgb(204, 16, 173);" class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                    
+
+                                    <button class="btn-database0" id="fullscreen-btn">
+                                        تكبير الشاشة <i style="color: rgb(204, 16, 173);" class="fa-solid fa-expand"></i>
+                                    </button>
+                                    
+                                    <button class="btn-database0" id="exit-fullscreen-btn" style="display: none;">
+                                        إنهاء التكبير <i style="color: rgb(204, 16, 173);" class="fa-solid fa-compress"></i>
+                                    </button>
+
+                                </div>
+
+                                <div class="card-body p-0"> <!-- أضفنا p-0 لإزالة البادينغ الداخلي -->
+                                    <div class="table-container" style="max-height: 300px; overflow-y: auto;">
+                                    
+                                        <table class="table table-bordered table-hover mb-0" id="example">
+                                            <thead style="position: sticky; top: 0; background: white; z-index: 10;">
+                                                <tr>
+                                                    <th><input type="checkbox" id="selectAll"></th>
+                                                    <th width="50">#</th>
+                                                    <th>اسم المنتج</th>
+                                                    <th>الرقم التسلسلي</th>
+                                                    <th>تاريخ الاستيراد</th>
+                                                    <th> البيع</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                                                    <th>1</th>
+                                                    <td>شاشة حاسوب</td>
+                                                    <td> 728293</td>
+                                                    <td>21.01.2023</td>
+                                                    <td>600 $</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                                                    <th>2</th>
+                                                    <td>موبايل</td>
+                                                    <td>324342</td>
+                                                    <td>01.01.2024</td>
+                                                    <td>900 $</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                                                    <th>3</th>
+                                                    <td>كاميرا</td>
+                                                    <td>728344</td>
+                                                    <td>13.02.2022</td>
+                                                    <td>560 $</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                                                    <th>4</th>
+                                                    <td>درون</td>
+                                                    <td>943845</td>
+                                                    <td>14.05.2025</td>
+                                                    <td>300 $</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                                                    <th>5</th>
+                                                    <td>هارد</td>
+                                                    <td>345453</td>
+                                                    <td>31.02.2025</td>
+                                                    <td>120 $</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                                                    <th>8</th>
+                                                    <td>مكتب حاسوب</td>
+                                                    <td>5647673</td>
+                                                    <td>11.09.2025</td>
+                                                    <td>400 $</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                                                    <th>6</th>
+                                                    <td>ميكرفون</td>
+                                                    <td>345245</td>
+                                                    <td>01.08.2025</td>
+                                                    <td>60 $</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                                                    <th>7</th>
+                                                    <td>سماعات</td>
+                                                    <td>655864</td>
+                                                    <td>03.02.2021</td>
+                                                    <td>30 $</td>
+                                                </tr>
+                                               
+                                                <tr>
+                                                    <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                                                    <th>9</th>
+                                                    <td>كيبورد</td>
+                                                    <td>5647673</td>
+                                                    <td>11.09.2025</td>
+                                                    <td>400 $</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                                                    <th>10</th>
+                                                    <td>ماوس</td>
+                                                    <td>5647674</td>
+                                                    <td>11.09.2025</td>
+                                                    <td>400 $</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                                                    <th>11</th>
+                                                    <td>حامل شاشة</td>
+                                                    <td>5647675</td>
+                                                    <td>11.09.2025</td>
+                                                    <td>400 $</td>
+                                                </tr>
+
+
+                                            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+<!--  start Add item -->
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade " id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">إضافة منتج جديد</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="row">
+                    <div class="mb-3 col">
+                        <label for="exampleInputEmail1" class="form-label">اسم المنتج</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      </div>
+      
+                      <div class="mb-3 col">
+                          <label for="exampleInputEmail1" class="form-label">تاريخ الاستيراد</label>
+                          <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                </div>
+                
+              <div class="row">
+                <div class="mb-3 col">
+                    <label class="input-group-text" for="inputGroupSelect01">نوع المنتج</label>
+                    <select class="form-select" id="inputGroupSelect01">
+                      <option selected>اختر...</option>
+                      <option value="1">حاسوب</option>
+                      <option value="2">موبايل</option>
+                      <option value="3">ملحقات</option>
+                    </select>
+                </div>
+
+              
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupFile01">أضف صورة المنتج</label>
+                    <input type="file" class="form-control" id="inputGroupFile01">
+                  </div>
+
+
+              </div>
+              <div class="input-group mb-3 col">
+                <label class="input-group-text" for="form-control">سعر المنتج</label>
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">.00</span>
+              </div>
+              
+                  
+                
+              </form>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">إغلاق</button>
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">حفظ البيانات</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- End Add item -->
+
+<!-- start Edit Item -->
+<div class="modal fade " id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">تعديل بيانات المنتج </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="row">
+                    <div class="mb-3 col">
+                        <label for="exampleInputEmail1" class="form-label">تعديل اسم المنتج</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="موبايل">
+                      </div>
+      
+                      <div class="mb-3 col">
+                          <label for="exampleInputEmail1" class="form-label">تعديل تاريخ الاستيراد</label>
+                          <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="03.01.2024">
+                        </div>
+                </div>
+                
+              <div class="row">
+                <div class="mb-3 col">
+                    <label class="input-group-text" for="inputGroupSelect01">تعديل نوع المنتج</label>
+                    <select class="form-select" id="inputGroupSelect01">
+                      <option selected>اختر...</option>
+                      <option value="1">حاسوب</option>
+                      <option value="2">موبايل</option>
+                      <option value="3">ملحقات</option>
+                    </select>
+                </div>
+
+              
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupFile01">أضف صورة المنتج</label>
+                    <input type="file" class="form-control" id="inputGroupFile01">
+                  </div>
+
+
+              </div>
+              <div class="input-group mb-3 col">
+                <label class="input-group-text" for="form-control">سعر المنتج</label>
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="750">
+                <span class="input-group-text">.00</span>
+              </div>
+              
+                  
+                
+              </form>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">إغلاق</button>
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">حفظ البيانات</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- End Edit Item -->
+
+
+<!-- start Delet Item -->
+<div class="modal" tabindex="-1" id="Delet-item">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">حذف بيانات المنتج</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>هل أنت متأكد من حذف بيانات المنتج!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">لا </button>
+          <button type="button" class="btn btn-success">نعم</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--End Delet Item -->
+
+
+<!--  Start Left-Side-Bar -->
+
+
+  
+<div class="offcanvas offcanvas-end sh0w" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+    
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+
+        <div class="side-body-left">
+                 
+        <div class="left-side-elements">
+            
+            <h3>التواصل مع الـدعـم <i class="fa-solid fa-headset ico-elem"></i></h3>
+            
+
+        </div>
+      
+        <div class="left-side-elements">
+            
+            <h3>المحفظة الالكترونية<i class="fa-solid fa-wallet ico-elem0"></i></h3>
+            
+
+        </div>
+      
+        <div class="left-side-elements">
+            
+            <h3>الاعدادات<i class="fa-solid fa-wrench ico-elem1"></i></h3>
+            
+
+        </div>
+      
+        <div class="left-side-elements">
+            
+            <h3>تسجيل الخروج<i class="fa-solid fa-right-from-bracket ico-elem2"></i></h3>
+            
+            
+        </div>
+
+        </div>
+     
+
+
+      </div>
+    </div>
+  </div>
+<!-- End Left-Side-Bar -->
+
+    <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.3.0/b-3.2.3/b-html5-3.2.3/b-print-3.2.3/r-3.0.4/datatables.min.js" integrity="sha384-oHKdgz7eNac3AbkHWbHx1Ge74DFKw3lCK3ORQy9b7lWo/zYqBHMg8W9WCjUUMJt9" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ar.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

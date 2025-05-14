@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/boostrap.css">
+    <link rel="stylesheet" href="assets/css/mylibrary.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script>
+        window.onload = function() { 
+   setTimeout(function(){
+  document.getElementById("loader").style.display = "none";
+       
+   }, 500);
+
+ };
+
+    </script>
+</head>
+
+
+
+
+
+
+
+<body>
+  
+    <div class="loader" id="loader">
+
+        <img width="80px" src="/assets/images/bouncing-circles.svg" alt="">
+    </div>
+
+
+    <div class="main-wrapper">
+        <nav class="fixed-top nav ">
+            <header class="header d-flex ">
+
+
+                <div class="right-header d-flex align-items-center gap-3 py-1 ">
+                    <div class="logo">
+                        <a class="text-pane" href="/">لوحة تحكم البائع</a>
+                    </div>
+
+                    <a href="#">
+                        <i style="font-size: 20px;" id="sidebar-toggle" class="fa-solid fa-bars-staggered"></i>
+                    </a>
+
+                    <form class="search" action="">
+                        <input type="text" class="form-control">
+                        <i class="fas fa-camera"></i>
+
+
+                    </form>
+                </div>
+
+
+
+
+
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div class="icons">
+                        <a href=""> <i class="fa-solid fa-comment"></i></a>
+                        <a href=""> <i class="fa-solid fa-envelope"></i></a>
+                        <a href=""> <i class="fa-solid fa-bell"></i></a>
+                        <!-- <a href=""> <i class="fa-solid fa-download"></i></a> -->
+                    </div>
+                    <div class="avatar">
+                        <img src="/assets/images/Untitled.jpg" alt="">
+                    </div>
+
+                    
+                    <a type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"> <i class="fa-solid fa-bars"></i></a> 
+                    
+                    
+                </div>
+            </header>
+        </nav>
+
+        <div class="upper-container">
+
+            <div class="sidebar" id="sidebar">
+                <div class="profile">
+                    <img width="90" src="/assets/images/Untitled.jpg" alt="">
+                    <h3>أسـعـد بـظ</h3>
+                </div>
+
+                <ul class="ul-sidebar">
+                    <li class="mb-2 active">
+                        <i class="fa-solid fa-house home"></i>
+                        <a href="">الـصـفـحـة الـرئيسية</a> <i class="fa-solid fa-arrow-down-short-wide"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-boxes-stacked home"></i>
+                        <a href="Products.html">الـــمــنـــتـــجـــــات</a> <i
+                            class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-chart-line home"></i>
+                        <a href="analysis.html">الــــتــحــــلــيــــلات</a> <i
+                            class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-handshake-angle home"></i>
+                        <a href="">الــصـــفـــقــات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-bullhorn home"></i>
+                        <a href="">حملات التسويق</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-star-half-stroke home"></i>
+                        <a href="">الـتـقـيـمــات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-tag home"></i>
+                        <a href="">الـتـسـعـيـر</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-money-bill-trend-up home"></i>
+                        <a href="">الأربـــــــاح</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-box home"></i>
+                        <a href="">الـطـلـبــات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-percent home"></i>
+                        <a href="">الـضرائب</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-rotate-left home"></i>
+                        <a href="">الـمـرتـجـع</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-bell home"></i>
+                        <a href="">الاشـعـارات</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+                    <li class="mb-5">
+                        <i class="fa-solid fa-circle-info home"></i>
+                        <a href="">الـدعـم</a> <i class="fa-solid fa-chevron-down arrow"></i>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="content p-2" id="content">
+                <div class="inner-content">
+                    <div class="container-fluid ">
+
+                        <div class="row ">
+                            <div class="col-md-4 ">
+                                <div class="income">
+                                    <h3>الـدخـل & الـمصـاريـف</h3>
+                                    <span class="inc-num  ver-dots">
+                                        <p><i class="fa-regular fa-circle-dot"></i> 12800 <i
+                                                class="fa-solid fa-dollar-sign"></i></p>
+                                    </span>
+                                    <span class="inc-num1  ver-dots">
+                                        <p><i class="fa-solid fa-minus"></i> 2900 <i class="fa-solid fa-dollar-sign"></i>
+                                        </p>
+                                    </span>
+                                    <i style="margin-top: 8px; font-size:x-large " class="fa-solid fa-ellipsis ver-dots"></i>
+                                </div>
+                            </div>
+                            
+
+                            <div class="col-md-3 left-side-visa">
+                                <div class="visa-card">
+                                    <div class="top-head-visa">
+                                        <h3>الرصيد الفعلي</h3> 
+                                        <img width="35px" height="35px" style="margin-right:98px ;" src="/assets/images/favicon.ico" alt="logo">
+                                        <!-- <i style="font-size:x-large " class="fa-solid fa-ellipsis"></i> -->
+                                    </div>
+                                    <div class="part1">
+                                        <div class="down-visa">
+                                            <span  style="color: #158d55;"><p style="font-size: 36px;" class="balance">15950<i class="fa-solid fa-dollar-sign"></i></p></span>
+                                            <span><p style="font-weight: bold; font-style:italic; font-size:x-large" >2743-3432-43XX-XXXX</p></span>
+                                            
+                                        </div>
+
+                                            
+                                            <span ><p style="margin-bottom: 0 ;"><i style="margin-left: 160px;" class="fa-solid fa-copy copy-icon"></i>Asaad Baz </p></span>
+                                        
+                                    </div>
+                                    
+                                
+
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-4 ">
+                                <div class="income">
+                                    <div class="tra-header">
+    
+                                        <div>
+                                            <h3>الـعـمـلــيـات الـبـنـكـيـة</h3>
+                                            <p><i style="padding-left:10px;" class="fa-solid fa-angle-down arrow-down"></i>
+                                                العمليات التي تمت مؤخراً</p>
+                                        </div>
+    
+                                        <div class="btn-tra-head">
+                                            <button class="tra-btn"> طباعة <i class="fa-solid fa-print"></i></button>
+                                            <button class="tra-btn"> مشاركة <i class="fa-solid fa-share-nodes"></i></button>
+                                        </div>
+                                        
+    
+                                    
+    
+                                    </div>
+    
+                                  
+                                    <div class="body-tra">
+    
+                                        <div class="line">
+                                            <h5><i style="padding-left: 10px;" class="fa-solid fa-money-bill-trend-up"></i>أرباح</h5>
+                                            <span>
+                                                <p style="color: #27a66b; font-size: 18px">9500<i
+                                                        class="fa-solid fa-dollar-sign"></i> </p>
+                                            </span>
+                                            <h5>اليوم</h5>
+                                            <h5>تمت <i style="color: #27a66b;"  class="fa-solid fa-circle-check"></i></h5>
+                                        </div>
+    
+                                        <div class="line">
+                                            <h5><i style="padding-left: 10px;" class="fa-solid fa-percent"></i>ضرائب </h5>
+                                            <span>
+                                                <p style="color: rgb(204, 68, 65); font-size: 18px">700<i
+                                                        class="fa-solid fa-dollar-sign"></i> </p>
+                                            </span>
+                                            <h5>اليوم</h5>
+                                            <h5>تمت <i style="color: #27a66b;"  class="fa-solid fa-circle-check"></i></h5>
+                                        </div>
+                                        <div class="line">
+                                            <h5><i style="padding-left: 10px;" class="fa-solid fa-boxes-packing"></i>خدمات</h5>
+                                            <span>
+                                                <p style="color: rgb(204, 68, 65); font-size: 18px">100<i
+                                                        class="fa-solid fa-dollar-sign"></i> </p>
+                                            </span>
+                                            <h5>اليوم</h5>
+                                            <h5>تمت <i style="color: #27a66b;"  class="fa-solid fa-circle-check"></i></h5>
+                                        </div>
+    
+                                        <div class="line">
+                                            <h5><i style="padding-left: 10px;" class="fa-solid fa-money-bill-transfer"></i>تحويل</h5>
+                                            <span>
+                                                <p style="color: #27a66b; font-size: 18px">1400<i
+                                                        class="fa-solid fa-dollar-sign"></i> </p>
+                                            </span>
+                                            <h5>اليوم</h5>
+                                            <h5>تمت <i style="color: #27a66b;" class="fa-solid fa-circle-check"></i></h5>
+                                        </div>
+                                       
+                                        <div class="line">
+                                            <h5><i style="padding-left: 10px;" class="fa-solid fa-unlock-keyhole"></i>حماية</h5>
+                                            <span>
+                                                <p style="color: rgb(204, 68, 65); font-size: 18px">11.89<i
+                                                        class="fa-solid fa-dollar-sign"></i> </p>
+                                            </span>
+                                            <h5>اليوم</h5>
+                                            <h5>تحقق <i style="color: #20b4da;"  class="fa-solid fa-hourglass-half"></i></h5>
+                                        </div>
+                                       
+    
+    
+    
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+
+
+
+                            <div class="col-md-3 left-side-visa up-mar-visa">
+                                <div class="visa-card">
+                                    <div class="top-head-visa">
+                                        <h3>الـتـفـاصـيـل</h3> 
+                                        <div class="btn-prom "><i style="padding-top: 3px; padding-right: 10px" class="fa-solid fa-crown"></i><p class="p-btn-prom">Premium</p></div>
+                                        <!-- <img width="35px" height="35px" style="margin-right:68px ;" src="/assets/images/2fav.png" class="s-logo" alt="logo"> -->
+                                        <!-- <i style="font-size:x-large " class="fa-solid fa-ellipsis"></i> -->
+                                    </div>
+                                    <div class="part1">
+                                        <div class="down-visa">
+                                            <span style="color: #158d55;"><p class="p-btn-prom" style="font-size: 36px;">الحساب فعال<i class="fa-solid fa-check"></i></p></span>
+                                            <span><p style="font-weight: bold; font-style:italic; font-size:x-large" >تاريخ الانتهاء  01.01.2036</p></span>
+                                            
+                                        </div>
+
+                                            
+                                            <span ><p style="margin-bottom: 0 ;"><i style="margin-left: 160px;" class="fa-solid fa-copy copy-icon"></i>  911-2331 </p></span>
+                                        
+                                    </div>
+                                    
+                                
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="client">
+                                        <div class="client-title">
+                                            <h3>
+                                                العملاء المخلصين
+                                            </h3>
+                                            <i style="margin-top: 8px; font-size:x-large " class="fa-solid fa-ellipsis ver-dots"></i>
+    
+                                        </div>
+                            
+                                        <div class="client-imgs">
+                                            <div class="group-img">
+                                                <img width="65px" src="/assets/images/download (1).jpeg" alt="">
+                                                <h5>أليكس بيل</h5>
+                                            </div>
+                                            <div class="group-img">
+                                                <img width="65px" src="/assets/images/download (2).jpeg" alt="">
+                                                <h5>ويل سميث</h5>
+                                            </div>
+                                            <div class="group-img">
+                                                <img width="65px" src="/assets/images/download (3).jpeg" alt="">
+                                                <h5>سام والتر</h5>
+                                            </div>
+                                            <div class="group-img">
+                                                <img width="65px" src="/assets/images/download (4).jpeg" alt="">
+                                                <h5>آنيتا بلاك</h5>
+                                            </div>
+                                            <div class="group-img">
+                                                <img width="65px" src="/assets/images/download (5).jpeg" alt="">
+                                                <h5>نيكولا فيت</h5>
+                                            </div>
+                                            <div class="group-img">
+                                                <img width="65px" src="/assets/images/download (6).jpeg" alt="">
+                                                <h5>سابا نيكول</h5>
+                                            </div>
+                                            <div class="group-img">
+                                                <img width="65px" src="/assets/images/download (7).jpeg" alt="">
+                                                <h5>اليسا لحن</h5>
+                                            </div>
+                                            <div class="group-img">
+                                                <img width="65px" src="/assets/images/download (8).jpeg" alt="">
+                                                <h5>شيرين واو</h5>
+                                            </div>
+                                            <div class="group-img">
+                                                <img width="65px" src="/assets/images/download (9).jpeg" alt="">
+                                                <h5>فاليري واي</h5>
+                                            </div>
+                                            <div class="group-img">
+                                                <img width="65px" src="/assets/images/download (10).jpeg" alt="">
+                                                <h5>توم كروز</h5>
+                                            </div>
+                                
+
+                                        </div>
+    
+                                    </div>
+                                
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    
+
+
+                        
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+<!--  Start Left-Side-Bar -->
+
+
+  
+  <div class="offcanvas offcanvas-end sh0w" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+    
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+
+        <div class="side-body-left">
+                 
+        <div class="left-side-elements">
+            
+            <h3>التواصل مع الـدعـم <i class="fa-solid fa-headset ico-elem"></i></h3>
+            
+
+        </div>
+      
+        <div class="left-side-elements">
+            
+            <h3>المحفظة الالكترونية<i class="fa-solid fa-wallet ico-elem0"></i></h3>
+            
+
+        </div>
+      
+        <div class="left-side-elements">
+            
+            <h3>الاعدادات<i class="fa-solid fa-wrench ico-elem1"></i></h3>
+            
+
+        </div>
+      
+        <div class="left-side-elements">
+            
+            <h3>تسجيل الخروج<i class="fa-solid fa-right-from-bracket ico-elem2"></i></h3>
+            
+            
+        </div>
+
+        </div>
+     
+
+
+      </div>
+    </div>
+  </div>
+<!-- End Left-Side-Bar -->
+
+
+
+
+
+
+
+
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+            <script src="assets/js/charts.js"></script>
+            <script src="assets/js/bootstrap.js"></script>
+            <script src="assets/js/script.js"></script>
+</body>
+
+</html>
